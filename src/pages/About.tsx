@@ -1,6 +1,7 @@
 import { CheckCircle, Target, Eye, Heart } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 import { Link } from 'react-router-dom';
+import Affiliations from '../components/Affiliations';
 
 function Reveal({ children, className = '', delay = '' }: { children: React.ReactNode; className?: string; delay?: string }) {
   const { ref, inView } = useInView();
@@ -20,7 +21,7 @@ export default function About() {
           <h1 className="text-3xl md:text-5xl font-bold text-white mt-2">About Alpha & Omega</h1>
           <div className="gold-bar mx-auto" />
           <p className="text-stone-300 max-w-2xl mx-auto mt-4">
-            Professional Accountants and Tax Advisors based in KwaZulu-Natal, committed to excellence from the beginning to the end of every engagement.
+            Alpha & Omega Professional Accountants and Tax Advisors (AOPATA) — helping you manage your finances with confidence.
           </p>
         </div>
       </section>
@@ -40,13 +41,13 @@ export default function About() {
               <h2 className="section-heading">From Alpha to Omega — Complete Professional Care</h2>
               <div className="gold-bar" />
               <p className="text-stone-600 leading-relaxed mb-4">
-                Alpha and Omega Professional Accountants and Tax Advisors was founded on the principle of providing complete, reliable accounting and tax services. The name reflects our commitment: we stand with our clients from the first consultation through to the final deliverable.
+                At Alpha & Omega, we provide professional accounting, tax and business advisory services designed to help individuals and businesses stay financially organised, compliant and prepared for the future.
               </p>
               <p className="text-stone-600 leading-relaxed mb-6">
-                Based in KwaZulu-Natal, we serve SMEs, professionals and individuals across the province. Our approach combines technical accuracy with clear communication and practical advice that supports sustainable business growth.
+                Our team collectively holds more than 100 years of experience in the tax and accounting fields. We combine technical expertise with a personalised approach, understanding your financial needs and providing practical solutions.
               </p>
               <ul className="space-y-3">
-                {['KZN-based practice with province-wide reach', 'SARS, CIPC and payroll specialists', 'Transparent, fixed-fee options available', 'Dedicated personal service'].map((item) => (
+                {['More than 100 years of combined team experience', 'Accounting, tax, payroll and compliance assistance', 'Business Advisory and Virtual CFO services', 'Professional, personalised guidance'].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-stone-700 text-sm">
                     <CheckCircle size={18} className="text-gold-500 shrink-0 mt-0.5" />
                     {item}
@@ -79,6 +80,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <Affiliations />
 
       <section className="py-16 bg-navy-900 text-center">
         <div className="max-w-2xl mx-auto px-4">

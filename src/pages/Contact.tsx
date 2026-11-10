@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, Mail, Clock, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const WA_ICON = () => (
@@ -107,7 +107,7 @@ export default function Contact() {
               <span className="section-tag">Send a Message</span>
               <h2 className="section-heading">Request a Consultation</h2>
               <div className="gold-bar" />
-              <p className="text-stone-500 text-sm mb-8">Fill in the form and we will respond within one business day.</p>
+              <p className="text-stone-500 text-sm mb-8">Complete the form and choose Open Email Draft. Your email app will open with the details filled in; press Send to deliver your enquiry to info@alpha-act.co.za.</p>
 
               <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">

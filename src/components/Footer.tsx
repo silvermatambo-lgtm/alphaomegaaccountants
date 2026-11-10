@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/logo.png" alt="Alpha and Omega" className="h-14 w-auto object-contain" />
+              <img src="/aopata-header-logo.webp" alt="Alpha and Omega" className="w-60 max-w-full h-auto object-contain rounded-lg bg-white p-2" />
             </div>
             <p className="text-stone-400 text-sm leading-relaxed mb-5">
               Alpha and Omega Professional Accountants and Tax Advisors — trusted accounting, tax compliance and business advisory services across KwaZulu-Natal.
@@ -26,7 +26,7 @@ export default function Footer() {
               <a href="https://wa.me/27795244298" aria-label="WhatsApp" className="w-9 h-9 rounded-full bg-navy-800 hover:bg-green-600 flex items-center justify-center transition-colors">
                 <WA_ICON />
               </a>
-              <a href="mailto:info@alphaomegaadvisors.co.za" aria-label="Email" className="w-9 h-9 rounded-full bg-navy-800 hover:bg-gold-500 flex items-center justify-center transition-colors">
+              <a href="mailto:info@alpha-act.co.za" aria-label="Email" className="w-9 h-9 rounded-full bg-navy-800 hover:bg-gold-500 flex items-center justify-center transition-colors">
                 <Mail size={15} />
               </a>
               <a href="https://www.alphaomegaadvisors.co.za" aria-label="Website" className="w-9 h-9 rounded-full bg-navy-800 hover:bg-gold-500 flex items-center justify-center transition-colors">
@@ -39,7 +39,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-4 pb-2 border-b border-navy-700">Quick Links</h4>
             <ul className="space-y-2">
-              {[['Home', '/'], ['About Us', '/about'], ['Services', '/services'], ['Gallery', '/gallery'], ['FAQ', '/faq'], ['Testimonials', '/testimonials'], ['Contact', '/contact']].map(([label, to]) => (
+              {[['Home', '/'], ['About Us', '/about'], ['Services', '/services'], ['Why Choose Us', '/why-choose-us'], ['Virtual CFO', '/virtual-cfo'], ['Gallery', '/gallery'], ['FAQ', '/faq'], ['Testimonials', '/testimonials'], ['Contact', '/contact']].map(([label, to]) => (
                 <li key={to}>
                   <Link to={to} className="text-stone-400 hover:text-gold-400 text-sm transition-colors flex items-center gap-2 group">
                     <span className="w-1 h-1 rounded-full bg-gold-500 group-hover:w-2 transition-all duration-200" />
@@ -54,7 +54,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-4 pb-2 border-b border-navy-700">Our Services</h4>
             <ul className="space-y-2">
-              {['Tax Compliance & SARS', 'Bookkeeping & Accounting', 'Company Registration', 'Payroll Management', 'Financial Statements', 'VAT Returns', 'Tax Planning', 'Business Advisory'].map((s) => (
+              {['Tax Compliance & SARS', 'Bookkeeping & Accounting', 'Company Registration', 'Payroll Management', 'Financial Statements', 'VAT Returns', 'Tax Planning', 'Business Advisory', 'Virtual CFO', 'SARS Compromises & Settlements'].map((s) => (
                 <li key={s}>
                   <Link to="/services" className="text-stone-400 hover:text-gold-400 text-sm transition-colors flex items-center gap-2 group">
                     <span className="w-1 h-1 rounded-full bg-gold-500 group-hover:w-2 transition-all duration-200" />
@@ -70,21 +70,21 @@ export default function Footer() {
             <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-4 pb-2 border-b border-navy-700">Contact Us</h4>
             <ul className="space-y-3 mb-5">
               <li>
-                <a href="tel:+27795244298" className="flex items-start gap-3 text-stone-400 hover:text-gold-400 text-sm transition-colors group">
+                <a href="tel:+27312088821" className="flex items-start gap-3 text-stone-400 hover:text-gold-400 text-sm transition-colors group">
                   <Phone size={15} className="mt-0.5 shrink-0 text-gold-500" />
-                  +27 79 524 4298
+                  031 208 8821
                 </a>
               </li>
               <li>
-                <a href="mailto:info@alphaomegaadvisors.co.za" className="flex items-start gap-3 text-stone-400 hover:text-gold-400 text-sm transition-colors group">
+                <a href="mailto:info@alpha-act.co.za" className="flex items-start gap-3 text-stone-400 hover:text-gold-400 text-sm transition-colors group">
                   <Mail size={15} className="mt-0.5 shrink-0 text-gold-500" />
-                  info@alphaomegaadvisors.co.za
+                  info@alpha-act.co.za
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-stone-400 text-sm">
                   <MapPin size={15} className="mt-0.5 shrink-0 text-gold-500" />
-                  <span>KwaZulu-Natal, South Africa</span>
+                  <span>56 Jan Hofmeyr Road, Westville, KwaZulu-Natal, South Africa</span>
                 </div>
               </li>
               <li>
@@ -105,7 +105,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Alpha and Omega Professional Accountants and Tax Advisors. All rights reserved.
           </p>
           <p className="text-stone-500 text-xs">
-            www.alphaomegaadvisors.co.za
+            Presented by WebDevPro · webdevpro.co.za
           </p>
         </div>
       </div>

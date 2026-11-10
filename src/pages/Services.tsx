@@ -12,60 +12,15 @@ function SectionReveal({ children, className = '', delay = '' }: { children: Rea
 }
 
 const SERVICES = [
-  {
-    icon: <FileText size={32} />,
-    title: 'Tax Compliance & SARS Returns',
-    desc: 'Complete income tax, provisional tax, and SARS eFiling submissions for individuals and companies. We ensure accurate, on-time filings and handle SARS correspondence on your behalf.',
-    points: ['Income tax returns (ITR12 / ITR14)', 'Provisional tax (IRP6)', 'SARS eFiling management', 'Objection & dispute assistance'],
-  },
-  {
-    icon: <Calculator size={32} />,
-    title: 'Bookkeeping & Accounting',
-    desc: 'Reliable monthly bookkeeping that keeps your financial records accurate and up to date. Ideal for SMEs that need clean books without the cost of a full-time bookkeeper.',
-    points: ['Monthly transaction capture', 'Bank & creditor reconciliations', 'Management accounts', 'Cloud accounting software support'],
-  },
-  {
-    icon: <Briefcase size={32} />,
-    title: 'Company Registration & CIPC',
-    desc: 'New company registrations, name reservations, director changes, annual returns and all CIPC-related compliance for private companies and close corporations.',
-    points: ['New company registration', 'Annual returns & beneficial ownership', 'Amendments & name changes', 'Deregistration assistance'],
-  },
-  {
-    icon: <Users size={32} />,
-    title: 'Payroll Management',
-    desc: 'End-to-end payroll processing including salaries, deductions, EMP201 monthly submissions, EMP501 reconciliations, UIF and payslips.',
-    points: ['Monthly payroll runs', 'EMP201 & EMP501', 'UIF compliance', 'Employee payslips & IRP5s'],
-  },
-  {
-    icon: <TrendingUp size={32} />,
-    title: 'Financial Statements',
-    desc: 'Preparation of annual financial statements in accordance with applicable frameworks, ready for submission to CIPC, banks or SARS.',
-    points: ['Annual financial statements', 'Independent reviews support', 'Management reports', 'Bank-ready packs'],
-  },
-  {
-    icon: <Scale size={32} />,
-    title: 'Tax Planning & Advisory',
-    desc: 'Proactive tax planning to structure your affairs efficiently and legally. We help you understand your tax position and make informed decisions.',
-    points: ['Tax optimisation strategies', 'Structure advice', 'Retirement & estate considerations', 'Ongoing advisory support'],
-  },
-  {
-    icon: <Building2 size={32} />,
-    title: 'VAT Registration & Returns',
-    desc: 'VAT registration, monthly or two-monthly VAT201 returns, and advice on VAT implications of your transactions.',
-    points: ['VAT registration', 'VAT201 returns', 'VAT reconciliations', 'Input & output tax reviews'],
-  },
-  {
-    icon: <ClipboardList size={32} />,
-    title: 'Business Consulting',
-    desc: 'Practical business advice covering cash-flow, compliance, systems and growth. We act as your external finance partner.',
-    points: ['Cash-flow guidance', 'Compliance health checks', 'Systems & process advice', 'Growth planning support'],
-  },
-  {
-    icon: <Shield size={32} />,
-    title: 'Independent Reviews & Support',
-    desc: 'Support with independent reviews and preparation of documentation required by auditors or regulators.',
-    points: ['Review preparation', 'Working paper support', 'Regulatory documentation', 'Liaison with auditors'],
-  },
+  { icon: <Calculator size={32} />, title: 'Accounting & Bookkeeping', desc: 'Keep financial records accurate, organised and up to date with accounting and bookkeeping services tailored to your business.', points: ['Bookkeeping and transaction recording', 'Financial reconciliations', 'Management reporting', 'Accurate, up-to-date records'] },
+  { icon: <FileText size={32} />, title: 'Tax Services / SARS Compromises & Settlements', desc: 'Tax preparation, planning, submissions and compliance for individuals and businesses, including assistance with SARS compromises and settlements.', points: ['Tax preparation and returns', 'SARS submissions and correspondence', 'Tax compliance and planning', 'SARS compromises and settlements'] },
+  { icon: <Users size={32} />, title: 'Payroll Services', desc: 'Manage employee payments, payroll records, statutory requirements and payroll reporting effectively and accurately.', points: ['Payroll processing', 'Employee records and payslips', 'Statutory payroll requirements', 'Payroll reporting'] },
+  { icon: <TrendingUp size={32} />, title: 'Annual Financial Statements / Management Accounts', desc: 'Professional statements and management accounts that provide a clear picture of your organisation’s financial performance and position.', points: ['Annual financial statements', 'Management accounts', 'Performance reporting', 'Financial position summaries'] },
+  { icon: <ClipboardList size={32} />, title: 'Business Advisory / Virtual CFO', desc: 'Strategic financial leadership without a full-time CFO, helping you understand what your numbers mean, improve cash flow and identify sustainable growth opportunities.', points: ['Financial performance insights', 'Cash-flow and working-capital planning', 'Budget monitoring and forecasts', 'Business strategy and financial controls'] },
+  { icon: <Shield size={32} />, title: 'Independent Reviews', desc: 'Assistance with independent reviews of annual financial statements for entities where an independent review is applicable.', points: ['Independent financial reviews', 'Annual statement reviews', 'Compliance support', 'Supporting documentation'] },
+  { icon: <Briefcase size={32} />, title: 'Company Registration & CIPC / Business Compliance', desc: 'Professional assistance with company registration and ongoing CIPC and regulatory requirements to help keep your business compliant and organised.', points: ['Company registrations', 'CIPC filings and amendments', 'Annual returns', 'Business compliance support'] },
+  { icon: <Building2 size={32} />, title: 'VAT Registration & Returns', desc: 'Assistance with VAT registration, VAT returns and VAT records as part of our wider tax and compliance support.', points: ['VAT registration', 'VAT return preparation', 'VAT reconciliations', 'VAT compliance guidance'] },
+  { icon: <Scale size={32} />, title: 'Financial & Tax Planning', desc: 'Practical financial planning and tax advice, with the information you need to make informed decisions and plan for the future.', points: ['Budgeting and forecasting', 'Cash-flow planning', 'Tax planning', 'Growth and investment decisions'] },
 ];
 
 export default function Services() {
@@ -77,7 +32,7 @@ export default function Services() {
           <h1 className="text-3xl md:text-5xl font-bold text-white mt-2">Accounting & Tax Services</h1>
           <div className="gold-bar mx-auto" />
           <p className="text-stone-300 max-w-2xl mx-auto mt-4">
-            Comprehensive professional services designed for South African businesses and individuals. We handle the numbers so you can focus on what matters.
+            Accounting, tax, payroll, regulatory compliance and strategic financial leadership for individuals and businesses.
           </p>
         </div>
       </section>
@@ -110,7 +65,7 @@ export default function Services() {
 
       <section className="py-16 bg-navy-900">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Need a service not listed?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Let's Talk About Your Financial Needs</h2>
           <p className="text-stone-300 mb-8">Contact us — we tailor our offerings to the needs of each client.</p>
           <Link to="/contact" className="btn-gold">
             Get in Touch <ArrowRight size={16} />

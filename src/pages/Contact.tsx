@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, Mail, Globe, Clock, MapPin, Send, CheckCircle, Loader } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin, Send } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
 const WA_ICON = () => (
@@ -16,6 +16,9 @@ const SERVICES = [
   'Financial Statements',
   'VAT Registration & Returns',
   'Tax Planning & Advisory',
+  'Business Advisory / Virtual CFO',
+  'SARS Compromises & Settlements',
+  'Independent Reviews',
   'Business Consulting',
   'Other Enquiry',
 ];
@@ -31,8 +34,6 @@ function Reveal({ children, className = '' }: { children: React.ReactNode; class
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', message: '' });
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   function validate() {
@@ -50,11 +51,16 @@ export default function Contact() {
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setErrors({});
-    setLoading(true);
-    await new Promise((r) => setTimeout(r, 1800));
-    setLoading(false);
-    setSuccess(true);
-    setForm({ name: '', phone: '', email: '', service: '', message: '' });
+    const body = [
+      'Consultation request from Alpha & Omega website',
+      'Name: ' + form.name,
+      'Phone: ' + form.phone,
+      'Email: ' + form.email,
+      'Service: ' + form.service,
+      '',
+      form.message
+    ].join('\n');
+    window.location.href = 'mailto:info@alpha-act.co.za?subject=' + encodeURIComponent('Website consultation request: ' + form.service) + '&body=' + encodeURIComponent(body);
   }
 
   return (
@@ -66,7 +72,7 @@ export default function Contact() {
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Contact Us</h1>
           <div className="gold-bar mx-auto" />
           <p className="text-stone-300 max-w-xl mx-auto mt-4">
-            Ready for professional accounting support? Get in touch for a free consultation.
+            Ready for professional accounting support? Get in touch to arrange a consultation.
           </p>
         </div>
       </section>
@@ -75,10 +81,10 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { icon: <Phone size={22} />, label: 'Call Us', value: '+27 79 524 4298', href: 'tel:+27795244298' },
+              { icon: <Phone size={22} />, label: 'Office', value: '031 208 8821', href: 'tel:+27312088821' },
               { icon: <WA_ICON />, label: 'WhatsApp', value: '079 524 4298', href: 'https://wa.me/27795244298' },
-              { icon: <Mail size={22} />, label: 'Email', value: 'info@alphaomegaadvisors.co.za', href: 'mailto:info@alphaomegaadvisors.co.za' },
-              { icon: <Globe size={22} />, label: 'Website', value: 'alphaomegaadvisors.co.za', href: 'https://www.alphaomegaadvisors.co.za' },
+              { icon: <Mail size={22} />, label: 'Email', value: 'info@alpha-act.co.za', href: 'mailto:info@alpha-act.co.za' },
+              { icon: <MapPin size={22} />, label: 'Visit Us', value: '56 Jan Hofmeyr Road, Westville', href: 'https://www.google.com/maps/search/?api=1&query=56+Jan+Hofmeyr+Road+Westville' },
             ].map((c) => (
               <a key={c.label} href={c.href} className="flex items-start gap-4 p-5 rounded-2xl border border-stone-100 hover:border-gold-300 hover:shadow-md transition-all bg-stone-50">
                 <div className="w-11 h-11 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center shrink-0">
@@ -103,15 +109,7 @@ export default function Contact() {
               <div className="gold-bar" />
               <p className="text-stone-500 text-sm mb-8">Fill in the form and we will respond within one business day.</p>
 
-              {success ? (
-                <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
-                  <CheckCircle size={48} className="text-green-500 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-green-800 mb-2">Thank you!</h3>
-                  <p className="text-green-700 text-sm">Your enquiry has been received. We will be in touch shortly.</p>
-                  <button onClick={() => setSuccess(false)} className="mt-6 text-sm text-green-700 underline">Send another message</button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-sm font-medium text-stone-700 mb-1.5">Full Name *</label>
@@ -142,11 +140,11 @@ export default function Contact() {
                     <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} rows={4} placeholder="Tell us how we can help..." className={`w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-gold-400 resize-none ${errors.message ? 'border-red-400' : 'border-stone-200'}`} />
                     {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
                   </div>
-                  <button type="submit" disabled={loading} className="btn-gold w-full justify-center py-3.5 disabled:opacity-60">
-                    {loading ? <><Loader size={16} className="animate-spin" /> Sending...</> : <><Send size={16} /> Send Message</>}
+                  <button type="submit" className="btn-gold w-full justify-center py-3.5 disabled:opacity-60">
+                    <Send size={16} /> Open Email Draft
                   </button>
                 </form>
-              )}
+
             </Reveal>
 
             <Reveal>
@@ -157,7 +155,7 @@ export default function Contact() {
                     <MapPin size={20} className="text-gold-400 shrink-0 mt-0.5" />
                     <div>
                       <p className="font-medium">Location</p>
-                      <p className="text-stone-300 text-sm">KwaZulu-Natal, South Africa</p>
+                      <p className="text-stone-300 text-sm">56 Jan Hofmeyr Road, Westville, KwaZulu-Natal</p>
                     </div>
                   </li>
                   <li className="flex gap-4">
@@ -171,15 +169,15 @@ export default function Contact() {
                   <li className="flex gap-4">
                     <Phone size={20} className="text-gold-400 shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-medium">Phone / WhatsApp</p>
-                      <a href="tel:+27795244298" className="text-stone-300 text-sm hover:text-gold-400">+27 79 524 4298</a>
+                      <p className="font-medium">Office Telephone</p>
+                      <a href="tel:+27312088821" className="text-stone-300 text-sm hover:text-gold-400">031 208 8821</a>
                     </div>
                   </li>
                   <li className="flex gap-4">
                     <Mail size={20} className="text-gold-400 shrink-0 mt-0.5" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <a href="mailto:info@alphaomegaadvisors.co.za" className="text-stone-300 text-sm hover:text-gold-400">info@alphaomegaadvisors.co.za</a>
+                      <a href="mailto:info@alpha-act.co.za" className="text-stone-300 text-sm hover:text-gold-400">info@alpha-act.co.za</a>
                     </div>
                   </li>
                 </ul>

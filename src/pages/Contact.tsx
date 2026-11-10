@@ -158,14 +158,7 @@ export default function Contact() {
                       <p className="text-stone-300 text-sm">56 Jan Hofmeyr Road, Westville, KwaZulu-Natal</p>
                     </div>
                   </li>
-                  <li className="flex gap-4">
-                    <Clock size={20} className="text-gold-400 shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-medium">Business Hours</p>
-                      <p className="text-stone-300 text-sm">Monday – Friday: 08:00 – 17:00</p>
-                      <p className="text-stone-400 text-xs mt-1">Closed weekends & public holidays</p>
-                    </div>
-                  </li>
+
                   <li className="flex gap-4">
                     <Phone size={20} className="text-gold-400 shrink-0 mt-0.5" />
                     <div>

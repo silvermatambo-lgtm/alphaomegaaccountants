@@ -20,7 +20,7 @@ export default function Footer() {
               <img src="/aopata-header-logo.webp" alt="Alpha and Omega" className="w-60 max-w-full h-auto object-contain rounded-lg bg-white p-2" />
             </div>
             <p className="text-stone-400 text-sm leading-relaxed mb-5">
-              Alpha and Omega Professional Accountants and Tax Advisors — trusted accounting, tax compliance and business advisory services across KwaZulu-Natal.
+              Alpha & Omega Professional Accountants and Tax Advisors (AOPATA). Helping you manage your finances with confidence.
             </p>
             <div className="flex gap-3">
               <a href="https://wa.me/27795244298" aria-label="WhatsApp" className="w-9 h-9 rounded-full bg-navy-800 hover:bg-green-600 flex items-center justify-center transition-colors">
@@ -29,7 +29,7 @@ export default function Footer() {
               <a href="mailto:info@alpha-act.co.za" aria-label="Email" className="w-9 h-9 rounded-full bg-navy-800 hover:bg-gold-500 flex items-center justify-center transition-colors">
                 <Mail size={15} />
               </a>
-              <a href="https://www.alphaomegaadvisors.co.za" aria-label="Website" className="w-9 h-9 rounded-full bg-navy-800 hover:bg-gold-500 flex items-center justify-center transition-colors">
+              <a href="/" aria-label="Home" className="w-9 h-9 rounded-full bg-navy-800 hover:bg-gold-500 flex items-center justify-center transition-colors">
                 <Globe size={15} />
               </a>
             </div>
@@ -90,7 +90,7 @@ export default function Footer() {
               <li>
                 <div className="flex items-start gap-3 text-stone-400 text-sm">
                   <Clock size={15} className="mt-0.5 shrink-0 text-gold-500" />
-                  <span>Mon – Fri: 08:00 – 17:00</span>
+                  <span>Contact our office for consultation times</span>
                 </div>
               </li>
             </ul>
@@ -105,7 +105,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Alpha and Omega Professional Accountants and Tax Advisors. All rights reserved.
           </p>
           <p className="text-stone-500 text-xs">
-            Presented by WebDevPro · webdevpro.co.za
+            Accounting. Tax. Advisory. Your trusted financial partner.
           </p>
         </div>
       </div>

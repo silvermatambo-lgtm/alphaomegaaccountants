@@ -4,14 +4,16 @@ import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
 
 const FAQS = [
-  { q: 'What accounting services do you offer?', a: 'We provide tax compliance and SARS returns, bookkeeping, company registration (CIPC), payroll, financial statements, VAT returns, tax planning and business advisory services.' },
+  { q: 'What accounting services do you offer?', a: 'We offer accounting and bookkeeping, tax compliance and SARS compromises or settlements, payroll, annual financial statements, management accounts, business advisory and Virtual CFO support, independent reviews, CIPC services and business compliance.' },
   { q: 'Do you work with small businesses?', a: 'Yes. The majority of our clients are SMEs and independent professionals across KwaZulu-Natal. We tailor packages to the size and needs of each client.' },
   { q: 'How do SARS eFiling and tax returns work with you?', a: 'We prepare and submit your returns via SARS eFiling, keep you informed of any correspondence, and handle follow-ups so you remain compliant.' },
   { q: 'Can you register a new company for me?', a: 'Yes. We handle CIPC company registration, name reservation, director appointments and subsequent annual returns and beneficial ownership filings.' },
   { q: 'Do you offer fixed monthly fees?', a: 'Yes. For ongoing bookkeeping, payroll and compliance work we offer transparent fixed-fee arrangements so you can budget with certainty.' },
-  { q: 'Where are you based?', a: 'We are based in KwaZulu-Natal and serve clients throughout the province. Much of our work is done remotely with secure document sharing.' },
-  { q: 'How quickly can you respond to an enquiry?', a: 'We aim to respond to all enquiries within one business day. For urgent SARS or payroll matters we prioritise accordingly.' },
-  { q: 'How do I get started?', a: 'Simply call, WhatsApp or use the contact form on this website. We will schedule a short consultation to understand your needs and propose a suitable service package.' },
+  { q: 'Where are you based?', a: 'Our office is at 56 Jan Hofmeyr Road, Westville, KwaZulu-Natal.' },
+  { q: 'How quickly can you respond to an enquiry?', a: 'Contact our office on 031 208 8821, email info@alpha-act.co.za or WhatsApp 079 524 4298 to discuss your enquiry.' },
+  { q: 'What is a Virtual CFO?', a: 'Virtual CFO services provide strategic financial support, cash-flow and budget monitoring, profitability guidance and help with financial decisions, without employing a full-time CFO.' },
+  { q: 'Can you help with SARS compromises and settlements?', a: 'Yes. Our company profile lists SARS compromises and settlements among our tax services. Contact the team to discuss your particular circumstances.' },
+  { q: 'How do I get started?', a: 'Call, WhatsApp or complete our consultation enquiry. We can discuss your accounting, tax, compliance or Virtual CFO requirements.' },
 ];
 
 function Reveal({ children, className = '' }: { children: React.ReactNode; className?: string }) {

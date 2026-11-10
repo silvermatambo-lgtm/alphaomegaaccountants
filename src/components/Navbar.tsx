@@ -112,7 +112,7 @@ export default function Navbar() {
               ))}
             </nav>
             <a
-              href="tel:+27795244298"
+              href="tel:+27312088821"
               className="mt-4 flex items-center justify-center gap-2 w-full py-3 bg-gold-500 hover:bg-gold-400 text-white font-semibold rounded-lg"
             >
               <Phone size={16} /> Call 031 208 8821

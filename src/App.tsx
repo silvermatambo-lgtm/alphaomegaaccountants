@@ -15,6 +15,8 @@ import Gallery from './pages/Gallery';
 import FAQ from './pages/FAQ';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
+import WhyChooseUs from './pages/WhyChooseUs';
+import VirtualCFO from './pages/VirtualCFO';
 
 function ServiceWorkerRegistrar() {
   useEffect(() => {
@@ -41,6 +43,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/why-choose-us" element={<WhyChooseUs />} />
+            <Route path="/virtual-cfo" element={<VirtualCFO />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/testimonials" element={<Testimonials />} />

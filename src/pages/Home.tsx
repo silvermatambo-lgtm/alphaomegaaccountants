@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Shield, Calculator, FileText, Users, CheckCircle, ArrowRight, Phone, Briefcase, TrendingUp, Scale } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
+import Affiliations from '../components/Affiliations';
 import { useInView } from '../hooks/useInView';
 
 function SectionReveal({ children, className = '', delay = '' }: { children: React.ReactNode; className?: string; delay?: string }) {
@@ -18,7 +19,9 @@ const SERVICES_PREVIEW = [
   { icon: <Briefcase size={28} />, title: 'Company Registration', desc: 'CIPC registration, amendments and annual returns.' },
   { icon: <Users size={28} />, title: 'Payroll Management', desc: 'Full payroll processing, EMP201/501 and UIF compliance.' },
   { icon: <TrendingUp size={28} />, title: 'Financial Statements', desc: 'Annual financial statements prepared to professional standards.' },
-  { icon: <Scale size={28} />, title: 'Tax Planning & Advisory', desc: 'Strategic advice to minimise tax legally and grow sustainably.' },
+  { icon: <Scale size={28} />, title: 'SARS Compromises & Settlements', desc: 'Tax guidance, submissions and support with SARS compromise and settlement matters.' },
+  { icon: <TrendingUp size={28} />, title: 'Business Advisory / Virtual CFO', desc: 'Strategic financial leadership, budgeting and cash-flow guidance without a full-time CFO.' },
+  { icon: <Shield size={28} />, title: 'Independent Reviews', desc: 'Independent reviews and annual financial reporting support where required.' },
 ];
 
 export default function Home() {
@@ -53,7 +56,7 @@ export default function Home() {
             <h2 className="section-heading text-center">Complete Accounting Services</h2>
             <div className="gold-bar mx-auto" />
             <p className="text-stone-500 max-w-2xl mx-auto mt-2">
-              From day-to-day bookkeeping to strategic tax planning — we provide end-to-end professional accounting services for businesses and individuals in KZN.
+              Reliable accounting, tax, payroll, compliance and Virtual CFO services for individuals and businesses.
             </p>
           </SectionReveal>
 
@@ -95,13 +98,13 @@ export default function Home() {
               <h2 className="section-heading">Your Trusted Partners from Beginning to End</h2>
               <div className="gold-bar" />
               <p className="text-stone-600 leading-relaxed mb-4">
-                Alpha and Omega Professional Accountants and Tax Advisors is a KwaZulu-Natal based practice dedicated to delivering accurate, timely and professional accounting and tax services.
+                Alpha & Omega Professional Accountants and Tax Advisors (AOPATA) provides reliable accounting, tax and business advisory services with more than 100 years of combined team experience.
               </p>
               <p className="text-stone-600 leading-relaxed mb-6">
-                We work with SMEs, professionals and individuals who value clear communication, compliance and practical advice that supports long-term success.
+                We combine technical expertise with a personalised approach, taking time to understand your financial needs and provide practical solutions that support your goals.
               </p>
               <ul className="space-y-3 mb-8">
-                {['Fully SARS & CIPC compliant processes', 'Personalised service with dedicated support', 'Transparent fixed-fee options available', 'Based in KZN — serving clients province-wide'].map((item) => (
+                {['Over 100 years of combined tax and accounting experience', 'Personalised, practical professional advice', 'Virtual CFO financial leadership', 'Accounting, tax, payroll and CIPC support'].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-stone-700 text-sm">
                     <CheckCircle size={18} className="text-gold-500 shrink-0 mt-0.5" />
                     {item}
@@ -116,6 +119,12 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16 bg-navy-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+          <SectionReveal><span className="section-tag">Virtual CFO</span><h2 className="text-3xl md:text-4xl font-bold mb-4">You Need Financial Direction, Not Just Financial Statements</h2><p className="text-stone-300 leading-relaxed">Understand your profitability, improve cash flow and plan for the future with strategic financial leadership — without employing a full-time CFO.</p></SectionReveal>
+          <SectionReveal><div className="bg-white/10 border border-white/15 rounded-2xl p-8"><h3 className="text-xl font-bold mb-5">Supporting Your Business Beyond the Numbers</h3><ul className="space-y-3 text-stone-200 text-sm">{['Monitor budgets and targets','Improve cash flow and working capital','Identify profitability opportunities','Strengthen internal controls','Plan for long-term sustainability'].map(x=><li key={x} className="flex gap-3"><CheckCircle size={17} className="text-gold-400 shrink-0"/>{x}</li>)}</ul><Link to="/virtual-cfo" className="btn-gold mt-6">Discover Virtual CFO <ArrowRight size={16}/></Link></div></SectionReveal>
+        </div>
+      </section>
       {/* CTA */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-navy-900" />
@@ -132,29 +141,31 @@ export default function Home() {
               Ready for Professional Accounting Support?
             </h2>
             <p className="text-stone-300 max-w-xl mx-auto mb-10 leading-relaxed">
-              Contact us today for a free consultation. Let us take care of your books, tax and compliance so you can focus on growing your business.
+              Contact us to arrange a consultation about your accounting, tax, payroll, compliance or business planning needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+27795244298" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 hover:bg-gold-400 text-white font-semibold rounded-xl text-sm transition-all duration-300 hover:-translate-y-0.5">
-                <Phone size={16} /> Call +27 79 524 4298
+              <a href="tel:+27312088821" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 hover:bg-gold-400 text-white font-semibold rounded-xl text-sm transition-all duration-300 hover:-translate-y-0.5">
+                <Phone size={16} /> Call 031 208 8821
               </a>
               <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-gold-400 text-gold-400 hover:bg-gold-400 hover:text-navy-900 font-semibold rounded-xl text-sm transition-all duration-300">
-                Request a Quote <ArrowRight size={16} />
+                Request a Consultation <ArrowRight size={16} />
               </Link>
             </div>
           </SectionReveal>
         </div>
       </section>
 
+      <Affiliations />
+
       {/* Stats */}
       <section className="py-16 bg-gold-50 border-y border-gold-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { num: '100%', label: 'Client Focused' },
-              { num: 'KZN', label: 'Based & Serving' },
-              { num: 'SARS', label: 'Fully Compliant' },
-              { num: '24h', label: 'Response Target' },
+              { num: '100+', label: 'Combined Years of Experience' },
+              { num: 'KZN', label: 'Westville Based' },
+              { num: 'SARS', label: 'Tax Support' },
+              { num: 'CFO', label: 'Virtual Financial Leadership' },
             ].map((stat) => (
               <SectionReveal key={stat.label}>
                 <p className="text-4xl font-bold text-gold-600 mb-1">{stat.num}</p>

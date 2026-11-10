@@ -5,24 +5,24 @@ import { Link } from 'react-router-dom';
 const SLIDES = [
   {
     image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=80',
-    tag: 'Trusted Accounting Partners',
+    tag: 'Helping You Manage Your Finances With Confidence',
     heading: 'Professional Accounting',
     highlight: 'From Alpha to Omega',
-    sub: 'Complete accounting, tax compliance and advisory services for businesses and individuals across KwaZulu-Natal.',
+    sub: 'Reliable accounting, tax and business advisory services, backed by over 100 years of combined team experience.',
   },
   {
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80',
     tag: 'Tax & SARS Compliance',
     heading: 'Expert Tax Advisors',
     highlight: 'You Can Rely On',
-    sub: 'From SARS eFiling and VAT returns to strategic tax planning — we keep you compliant and optimised.',
+    sub: 'Tax preparation, compliance and planning, including assistance with SARS compromises and settlements.',
   },
   {
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80',
     tag: 'Business Growth Support',
-    heading: 'Bookkeeping to Boardroom',
-    highlight: 'Full Spectrum Service',
-    sub: 'Accurate books, clear financial statements and practical advice that helps your business thrive.',
+    heading: 'Business Insight & Virtual CFO',
+    highlight: 'Financial Direction for Growth',
+    sub: 'Strategic financial leadership without the cost of a full-time Chief Financial Officer.',
   },
 ];
 
@@ -96,11 +96,11 @@ export default function HeroSlider() {
             {slide.sub}
           </p>
           <div className={`flex flex-wrap gap-3 transition-opacity duration-500 ${done ? 'opacity-100' : 'opacity-0'}`}>
-            <a href="tel:+27795244298" className="inline-flex items-center gap-2 px-6 py-3.5 bg-gold-500 hover:bg-gold-400 text-white font-semibold rounded-xl text-sm transition-all hover:-translate-y-0.5">
-              <Phone size={16} /> Call +27 79 524 4298
+            <a href="tel:+27312088821" className="inline-flex items-center gap-2 px-6 py-3.5 bg-gold-500 hover:bg-gold-400 text-white font-semibold rounded-xl text-sm transition-all hover:-translate-y-0.5">
+              <Phone size={16} /> Call 031 208 8821
             </a>
             <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3.5 border-2 border-white/40 hover:border-gold-400 hover:bg-gold-500/10 text-white font-semibold rounded-xl text-sm transition-all">
-              <FileText size={16} /> Request a Quote
+              <FileText size={16} /> Request a Consultation
             </Link>
             <a href="https://wa.me/27795244298" className="inline-flex items-center gap-2 px-6 py-3.5 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-xl text-sm transition-all">
               <MessageCircle size={16} /> WhatsApp

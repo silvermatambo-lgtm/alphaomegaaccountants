@@ -11,6 +11,9 @@ const SERVICES = [
   'Financial Statements',
   'VAT Registration & Returns',
   'Tax Planning & Advisory',
+  'Business Advisory / Virtual CFO',
+  'SARS Compromises & Settlements',
+  'Independent Reviews',
   'Business Consulting',
   'Other Enquiry',
 ];
@@ -56,7 +59,7 @@ export default function FloatingWhatsApp() {
                 </div>
                 <div>
                   <p className="font-bold text-sm">Alpha & Omega</p>
-                  <p className="text-xs text-stone-300">WhatsApp Assistant • Online</p>
+                  <p className="text-xs text-stone-300">WhatsApp Enquiry Assistant</p>
                 </div>
               </div>
               <button onClick={() => setOpen(false)} className="text-stone-300 hover:text-white">

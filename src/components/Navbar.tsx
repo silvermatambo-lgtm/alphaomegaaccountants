@@ -6,8 +6,9 @@ const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
-  { label: 'Gallery', to: '/gallery' },
-  { label: 'FAQ', to: '/faq' },
+  { label: 'Why Choose Us', to: '/why-choose-us' },
+  { label: 'Virtual CFO', to: '/virtual-cfo' },
+
   { label: 'Testimonials', to: '/testimonials' },
   { label: 'Contact', to: '/contact' },
 ];
@@ -41,19 +42,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img
-              src="/logo.png"
-              alt="Alpha and Omega Logo"
-              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-            />
-            <div className="hidden sm:block">
-              <p className="text-white font-bold text-base leading-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
-                Alpha & Omega
-              </p>
-              <p className="text-gold-400 text-[10px] tracking-widest uppercase font-medium">
-                Professional Accountants
-              </p>
-            </div>
+            <img src="/aopata-header-logo.webp" alt="Alpha & Omega Professional Accountants and Tax Advisors" className="w-[230px] max-w-[55vw] h-auto object-contain bg-white rounded-lg px-2 py-1 shadow-sm transition-transform duration-300 group-hover:scale-105" />
           </Link>
 
           {/* Desktop nav */}
@@ -76,7 +65,7 @@ export default function Navbar() {
           {/* CTA + burger */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:+27795244298"
+              href="tel:+27312088821"
               className="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-gold-500 hover:bg-gold-400 text-white text-sm font-semibold rounded-lg transition-all duration-300 hover:-translate-y-0.5"
             >
               <Phone size={14} />
@@ -100,8 +89,8 @@ export default function Navbar() {
           <div className="absolute top-0 right-0 h-full w-[85%] max-w-sm bg-navy-900 shadow-2xl p-6 flex flex-col animate-slide-right">
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center gap-3">
-                <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
-                <span className="text-white font-bold text-sm">Alpha & Omega</span>
+                <img src="/aopata-header-logo.webp" alt="Alpha & Omega" className="w-44 h-auto bg-white rounded-md p-1" />
+                
               </div>
               <button onClick={() => setMenuOpen(false)} className="text-white hover:text-gold-400">
                 <X size={24} />
@@ -126,7 +115,7 @@ export default function Navbar() {
               href="tel:+27795244298"
               className="mt-4 flex items-center justify-center gap-2 w-full py-3 bg-gold-500 hover:bg-gold-400 text-white font-semibold rounded-lg"
             >
-              <Phone size={16} /> Call +27 79 524 4298
+              <Phone size={16} /> Call 031 208 8821
             </a>
           </div>
         </div>
